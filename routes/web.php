@@ -36,25 +36,31 @@ Route::get(
     '/Prodotti', 
     function (){
         $cards = [
-            'title'=>[
-                'Cartolina 1',
-                'Cartolina 2', 
-                'Cartolina 3', 
-                'Cartolina 4'
-            ], 
-            'description' =>[
-                'Descrizione della cartolina. Questa è una breve descrizione che fornisce informazioni sulla cartolina1',
-                'Descrizione della cartolina. Questa è una breve descrizione che fornisce informazioni sulla cartolina2',
-                'Descrizione della cartolina. Questa è una breve descrizione che fornisce informazioni sulla cartolina3', 
-                'Descrizione della cartolina. Questa è una breve descrizione che fornisce informazioni sulla cartolina4'
-            ],
-            'button'=>[
-                'Aggiungi al carrello',
-                'Aggiungi al carrello', 
-                'Aggiungi al carrello',
-                'Aggiungi al carrello'
-            ], 
-            ];
+        [
+            'titolo' => 'Descrizione 1',
+            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
+                fornisce informazioni sulla cartolina.',
+            'button' => 'Aggiungi al carrello'
+        ],
+        [
+            'titolo' => 'Descrizione 2',
+            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
+                fornisce informazioni sulla cartolina.',
+            'button' => 'Aggiungi al carrello'
+        ],
+        [
+            'titolo' => 'Descrizione 2',
+            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
+                fornisce informazioni sulla cartolina.',
+            'button' => 'Aggiungi al carrello'
+        ],
+        [
+            'titolo' => 'Descrizione 4',
+            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
+                fornisce informazioni sulla cartolina.',
+            'button' => 'Aggiungi al carrello'
+        ]
+        ];
         return view('products', ['cards' => $cards]);
     }
 );
@@ -65,6 +71,26 @@ Route::get(
         return view('form');
     }
 );
+/* Cosi lo ha fatto Melania
+$articoli = [
+    [
+        'titolo' => 'Introduzione a PHP',
+        'descrizione' => 'Una guida per principianti sul linguaggio PHP.',
+        'autore' => 'Mario Rossi'
+    ],
+    [
+        'titolo' => 'Laravel per tutti',
+        'descrizione' => 'Scopri come costruire applicazioni web con Laravel.',
+        'autore' => 'Lucia Bianchi'
+    ],
+],
+    [
+        'titolo' => 'Programmazione moderna in PHP',
+        'descrizione' => 'Tecniche avanzate e best practices nel 2025.',
+        'autore' => 'Giovanni Verdi'
+    ]
+];
+*/
 
 /*
 Route::get(

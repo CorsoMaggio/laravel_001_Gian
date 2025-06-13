@@ -52,11 +52,11 @@
             />
             <div class="card" style="width: 18rem;">
               @foreach ($cards as $card)
-                <h5 class="card-title">{{$cards['title']}}</h5>
+                <h5 class="card-title">{{$card['titolo']}}</h5>
                 <p class="card-text">
-                  {{$cards['description']}}
+                  {{$card['para']}}
                 </p> 
-                <a href="#" class="btn btn-primary">{{$cards['button']}}</a>
+                <a href="#" class="btn btn-primary">{{$card['button']}}</a>
               @endforeach
               </ul>
       <!--    <h5 class="card-title">Cartolina 1</h5>
