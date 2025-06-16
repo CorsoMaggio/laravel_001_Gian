@@ -47,18 +47,6 @@ Route::get(
             'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
                 fornisce informazioni sulla cartolina.',
             'button' => 'Aggiungi al carrello'
-        ],
-        [
-            'titolo' => 'Descrizione 2',
-            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
-                fornisce informazioni sulla cartolina.',
-            'button' => 'Aggiungi al carrello'
-        ],
-        [
-            'titolo' => 'Descrizione 4',
-            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
-                fornisce informazioni sulla cartolina.',
-            'button' => 'Aggiungi al carrello'
         ]
         ];
         return view('products', ['cards' => $cards]);
