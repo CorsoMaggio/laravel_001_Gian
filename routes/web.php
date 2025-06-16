@@ -1,88 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;// modo per importare la classe
+use App\Http\Controllers\PageController;
 
-Route::get(
-    '/', 
-    function (){
-        return view('welcome');
-    }
-);
+Route::get('/', [PageController::class, 'homepage']);
 
-Route::get(
-    '/Prodotti', 
-    function (){
-        $cards = [
-        [
-            'titolo' => 'Cartolina 1',
-            'para' => 'Descrizione della cartolina 1. Questa è una breve descrizione che
-                fornisce informazioni sulla cartolina.',
-            'button' => 'Aggiungi al carrello',
-            'image' => 'https://picsum.photos/1920/1080/?random=1'
-        ],
-        [
-            'titolo' => 'Cartolina 2',
-            'para' => 'Descrizione della cartolina 2. Questa è una breve descrizione che
-                fornisce informazioni sulla cartolina.',
-            'button' => 'Aggiungi al carrello',
-            'image' => 'https://picsum.photos/1920/1080/?random=2'
-        ],
-        [
-            'titolo' => 'Cartolina 3',
-            'para' => 'Descrizione della cartolina 3. Questa è una breve descrizione che
-                fornisce informazioni sulla cartolina.',
-            'button' => 'Aggiungi al carrello',
-            'image' => 'https://picsum.photos/1920/1080/?random=3'
-        ]
-        ];
-        return view('products', ['cards' => $cards]);
-    }
-);
+Route::get('/Prodotti', [PageController::class, 'products']);
 
-Route::get(
-    '/Contatti', 
-    function (){
-        return view('form');   
-    }
-);
+Route::get('/Contatti', [PageController::class, 'contacts']);
 
 
-Route::get('/Dettagli/{id}', function ($id) {
-    $cards = [
-    [ // se uso un ID devo ricordarmi che è un codice numerico univoco e intero
-        
-        'id' => 1,
-        'titolo' => 'Cartolina 1',
-        'para' => 'Descrizione della cartolina 1. Questa è una breve descrizione che
-            fornisce informazioni sulla cartolina.',
-        'button' => 'Aggiungi al carrello',
-        'image' => 'https://picsum.photos/1920/1080/?random=1'
-    ],
-    [
-        'id' => 2,
-        'titolo' => 'Cartolina 2',
-        'para' => 'Descrizione della cartolina 2. Questa è una breve descrizione che
-            fornisce informazioni sulla cartolina.',
-        'button' => 'Aggiungi al carrello',
-        'image' => 'https://picsum.photos/1920/1080/?random=2'
-    ],
-    [
-        'id' => 3,
-        'titolo' => 'Cartolina 3',
-        'para' => 'Descrizione della cartolina 3. Questa è una breve descrizione che
-            fornisce informazioni sulla cartolina.',
-        'button' => 'Aggiungi al carrello',
-        'image' => 'https://picsum.photos/1920/1080/?random=3'
-    ]
-    ];
-
-    foreach($cards as $card){
-        if($id == $card['id']) {
-            return view('detail', ['card' => $card]);
-        }       
-    }
-    abort(404);
-});
+Route::get('/Dettagli/{id}', [PageController::class, 'detail']);
 
 //dominio= http://127.0.0.1:8000/
 // dominio ha una radice principale che non cambia mai
