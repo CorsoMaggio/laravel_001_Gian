@@ -38,6 +38,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/Contatti">Contacts</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Dettagli">Details</a>
+            </li>
           </ul>
         </div>
       </div>

@@ -38,6 +38,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/Contatti">Contacts</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Dettagli">Details</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -52,10 +55,12 @@
                         />
 <!-- Come si inseriscono le immagini se sono dentro il tag, e non tra i tag? -->
                         <div class="card-body"> 
-                          <h5 class="card-title">{{$card['titolo']}}</h5>
+                          <h5 class="card-title">
+                            <a href="">{{$card['titolo']}}</a>
+                          </h5>
                           <hr>
                           <p class="card-text">
-                              {{$card['para']}}
+                            <a href="">{{$card['para']}}</a>
                           </p> 
                           <a href="#" class="btn btn-primary">{{$card['button']}}</a> 
                         </div>
