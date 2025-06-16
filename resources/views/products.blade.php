@@ -39,19 +39,19 @@
                 <a class="nav-link" href="/Contatti">Contacts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Dettagli">Details</a>
+                <a class="nav-link" href="/Dettagli/1">Details</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>  
+      </nav>
         <div class="container my-5">
             <div class="row justify-content-center">
                 @foreach ($cards as $card)
                 <div class="col-md-4 mb-4"> <div class="card rounded-3 shadow-sm h-100"> <img
-                            src="https://picsum.photos/1920/1080/?blur=2"
+                            src="{{ $card['image'] }}"
                             class="card-img-top rounded-top"
-                            alt="Immagine prodotto"
+                            alt="{{ $card['para'] }}"
                         />
 <!-- Come si inseriscono le immagini se sono dentro il tag, e non tra i tag? -->
                         <div class="card-body"> 

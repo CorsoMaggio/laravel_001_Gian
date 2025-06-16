@@ -39,7 +39,7 @@
                 <a class="nav-link" href="/Contatti">Contacts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Dettagli">Details</a>
+                <a class="nav-link" href="/Dettagli/1">Details</a>
               </li>
             </ul>
           </div>

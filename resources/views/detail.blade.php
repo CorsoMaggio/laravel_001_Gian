@@ -27,6 +27,7 @@
           <li class="nav-item"><a class="nav-link" href="/">Homepage</a></li>
           <li class="nav-item"><a class="nav-link" href="/Prodotti">Products</a></li>
           <li class="nav-item"><a class="nav-link" href="/Contatti">Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Dettagli/1">Contacts</a></li>
         </ul>
       </div>
     </div>
@@ -37,15 +38,15 @@
       <div class="col-md-6">
         <div class="card rounded-3 shadow-sm">
           <img
-            src="https://picsum.photos/1920/1080/?blur=2"
+            src="{{ $card['image'] }}"
             class="card-img-top rounded-top"
-            alt="Immagine prodotto"
+            alt="{{ $card['para'] }}"
           />
           <div class="card-body">
-            <h4>ID: {{ $card['id'] }}</h4>
-            <h5 class="card-title">{{ $card['titolo'] }}</h5>
+            <h4><a href="">ID: {{ $card['id'] }}</a></h4>
+            <h5 class="card-title"><a href="">{{ $card['titolo'] }}</a></h5>
             <hr>
-            <p class="card-text">{{ $card['para'] }}</p>
+            <p class="card-text"><a href="">{{ $card['para'] }}</a></p>
             <a href="#" class="btn btn-primary">{{ $card['button'] }}</a>
           </div>
         
