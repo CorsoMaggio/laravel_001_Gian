@@ -37,14 +37,20 @@ Route::get(
     function (){
         $cards = [
         [
-            'titolo' => 'Descrizione 1',
-            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
+            'titolo' => 'Cartolina 1',
+            'para' => 'Descrizione della cartolina 1. Questa è una breve descrizione che
                 fornisce informazioni sulla cartolina.',
             'button' => 'Aggiungi al carrello'
         ],
         [
-            'titolo' => 'Descrizione 2',
-            'para' => 'Descrizione della cartolina. Questa è una breve descrizione che
+            'titolo' => 'Cartolina 2',
+            'para' => 'Descrizione della cartolina 2. Questa è una breve descrizione che
+                fornisce informazioni sulla cartolina.',
+            'button' => 'Aggiungi al carrello'
+        ],
+        [
+            'titolo' => 'Cartolina 3',
+            'para' => 'Descrizione della cartolina 3. Questa è una breve descrizione che
                 fornisce informazioni sulla cartolina.',
             'button' => 'Aggiungi al carrello'
         ]

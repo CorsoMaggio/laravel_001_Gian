@@ -50,11 +50,14 @@
                             class="card-img-top rounded-top"
                             alt="Immagine prodotto"
                         />
-                        <div class="card-body"> <h5 class="card-title">{{$card['titolo']}}</h5>
-                            <p class="card-text">
-                                {{$card['para']}}
-                            </p> 
-                            <a href="#" class="btn btn-primary">{{$card['button']}}</a> 
+<!-- Come si inseriscono le immagini se sono dentro il tag, e non tra i tag? -->
+                        <div class="card-body"> 
+                          <h5 class="card-title">{{$card['titolo']}}</h5>
+                          <hr>
+                          <p class="card-text">
+                              {{$card['para']}}
+                          </p> 
+                          <a href="#" class="btn btn-primary">{{$card['button']}}</a> 
                         </div>
                     </div>
                 </div>
